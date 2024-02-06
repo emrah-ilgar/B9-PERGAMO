@@ -15,6 +15,7 @@ Feature: Als Benutzer sollte ich auf der Startseite Kategorien und Unterkategori
       | Shop            |
       | Aktion          |
       | Großhandel      |
+    |   Hello              |
   @B9PR-35
   Scenario Outline:
     Then Der Benutzer bewegt sich mit der Maus über das "Frühstück" und sollte die "<submenü>" sehen können
