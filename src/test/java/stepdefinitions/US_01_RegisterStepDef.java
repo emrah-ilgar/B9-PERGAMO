@@ -16,6 +16,7 @@ public class US_01_RegisterStepDef {
     US_01_RegisterPage registerPage=new US_01_RegisterPage();
     @Given("Ich sollte zur Website {string} gehen.")
     public void ich_sollte_zur_website_gehen(String url) {
+
         Driver.get().get(ConfigurationReader.get(url));
     }
 
