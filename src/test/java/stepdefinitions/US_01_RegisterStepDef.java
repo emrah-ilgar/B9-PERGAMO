@@ -19,18 +19,17 @@ public class US_01_RegisterStepDef {
         Driver.get().get(ConfigurationReader.get(url));
     }
 
-    @Given("Der Benutzer klickt auf die Account button")
+    @Given("Der Benutzer klickt auf die Einloggen button")
     public void derBenutzerKlicktAufDieAccountButton() {
-        BrowserUtils.waitFor(3);
+
         registerPage.einLoggenButton.click();
-        BrowserUtils.waitFor(3);
+
     }
 
 
     @When("Geben Sie die Adresse {string} in das E-Mail-Feld ein")
     public void geben_sie_die_adresse_in_das_e_mail_feld_ein(String email) {
-        BrowserUtils.waitFor(3);
-        registerPage.emailInput.click();
+
         registerPage.emailInput.sendKeys(email);
 
     }
@@ -42,6 +41,7 @@ public class US_01_RegisterStepDef {
     @Then("Klickt auf die Anmeldung button")
     public void klickt_auf_die_anmeldung_button() {
         registerPage.anmeldungButton.click();
+        BrowserUtils.waitFor(20);
 
     }
     @Then("Überprüfen Sie den Text {string}")
